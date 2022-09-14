@@ -8,8 +8,9 @@ async function run() {
       replaceSlashes: core.getBooleanInput('replace-slashes'),
     }
 
+    const refName = process.env.GITHUB_HEAD_REF || process.env.GITHUB_REF_NAME
     const replacements = parseRules(opts.replaceRefs)
-    const releaseName = processRef(process.env.GITHUB_REF_NAME, opts.replaceSlashes, replacements)
+    const releaseName = processRef(refName, opts.replaceSlashes, replacements)
   
     core.setOutput('name', releaseName)
     core.exportVariable('RELEASE_NAME', releaseName)
