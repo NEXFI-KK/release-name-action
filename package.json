@@ -2,10 +2,10 @@
   "name": "release-name-action",
   "version": "1.0.0",
   "description": "Generate more useful release names from GitHub refs",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "jest",
-    "build": "ncc build src/index.js -o dist"
+    "build": "ncc build src/index.js --minify -o dist"
   },
   "repository": {
     "type": "git",
