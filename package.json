@@ -4,7 +4,8 @@
   "description": "Generate more useful release names from GitHub refs",
   "main": "src/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "ncc build src/index.js -o dist"
   },
   "repository": {
     "type": "git",
