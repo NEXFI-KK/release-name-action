@@ -1,0 +1,27 @@
+{
+  "name": "release-name-action",
+  "version": "1.0.0",
+  "description": "Generate more useful release names from GitHub refs",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NEXFI-KK/release-name-action.git"
+  },
+  "keywords": [],
+  "author": "Tanner Mickelson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NEXFI-KK/release-name-action/issues"
+  },
+  "homepage": "https://github.com/NEXFI-KK/release-name-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.9.1",
+    "@actions/github": "^5.0.3"
+  },
+  "devDependencies": {
+    "jest": "^29.0.3"
+  }
+}

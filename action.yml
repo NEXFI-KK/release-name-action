@@ -1,0 +1,18 @@
+name: Release Name
+description: Generate more useful release names from GitHub refs.
+inputs:
+  replace-slashes:
+    description: Replace slashes in the ref name with hyphens '-'.
+    required: false
+    default: true
+  replace-refs:
+    description: |
+      Replace specific branch/tag names, for example: "master" to "latest" for Docker tags.
+      This is specified as a multiline string with lines in the format "oldbranch=newname" and one replace rule per line. 
+    required: false
+outputs:
+  name:
+    description: The generated release name.
+runs:
+  using: node16
+  main: src/index.js
