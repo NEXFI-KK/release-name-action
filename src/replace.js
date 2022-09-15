@@ -24,7 +24,7 @@ function processRef(refName, replaceSlashes, replacements) {
     return replacements[refName]
   }
 
-  return replaceSlashes ? refName.replace('/', '-') : refName
+  return replaceSlashes ? refName.replace(/\//g, '-') : refName
 }
 
 module.exports = { parseRules, processRef }

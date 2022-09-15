@@ -26,6 +26,10 @@ describe('processRef tests', () => {
     const name = processRef('feature/something', true, {})
     expect(name).toBe('feature-something')
   })
+  it('should handle dependabot PR format', () => {
+    const name = processRef('dependabot/npm_and_yarn/typescript-4.8.3', true, {})
+    expect(name).toBe('dependabot-npm_and_yarn-typescript-4.8.3')
+  })
   it('should NOT replace slashes if not enabled', () => {
     const name = processRef('feature/something', false, {})
     expect(name).toBe('feature/something')
