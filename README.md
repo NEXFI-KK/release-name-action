@@ -13,7 +13,7 @@ See [action.yml](action.yml)
 steps:
   - uses: actions/checkout@v3
 
-  - uses: NEXFI-KK/release-name-action@v1
+  - uses: NEXFI-KK/release-name-action@v1.1
     id: release-name
     with:
       replace-refs: master=latest
